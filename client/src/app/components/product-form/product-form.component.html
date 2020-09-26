@@ -1,0 +1,104 @@
+
+    <main class="main">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item"><a href="#">Admin</a></li>
+            <li class="breadcrumb-item active">Productos</li>
+        </ol>        
+    <div class="col-md-11  mx-auto">
+        <div class = "modal-content" >
+            <div class="modal-body">
+                <form>
+                    <div class= "row">
+                        <div class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Identificador</label>
+                            <input type="text" required class="form-control" name="ID"  [(ngModel)] = "product.ID" placeholder="ID" autofocus >                           
+                            <br>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Nombre</label>
+                            <input type="text" class="form-control" name="PNAME" [(ngModel)] = "product.PNAME" placeholder="Producto" autofocus>
+                            <br>
+                        </div>
+                        <div  class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Genero</label>
+                            <select class="form-control " name = "GENDER" [(ngModel)] = "product.GENDER" class = "form-control">
+                             <option>Seleccione</option>
+                             <option>Masculino</option>
+                             <option>Femenino</option>
+                             <option>Unisex</option>
+                            </select>
+                            <br>
+                        </div>
+                        <div  class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Descripción</label>           
+                            <input type="text" class="form-control" name="DESCRIPTION" [(ngModel)] = "product.DESCRIPTION" placeholder="Descripcion" autofocus>
+                            <br>
+                        </div>
+                        <div  class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Imagen</label>           
+                            <input type="text" class="form-control" name="IMAGE" [(ngModel)] = "product.IMAGE" placeholder="Imagen" autofocus>
+                            <br>
+                        </div>
+                        <div  class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Precio</label>
+                            <input type="text" class="form-control" name="PRICE" [(ngModel)] = "product.PRICE" placeholder="Precio" autofocus>                       
+                            <br>
+                        </div>
+                        <div  class="col-12 col-md-6 col-lg-4 col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Color</label>
+                            <select class="form-control " name = "COLOR" [(ngModel)] = "product.COLOR" class="form-control">
+                                 <option>Seleccione</option>
+                                 <option>Negro</option>
+                                 <option>Blanco</option>
+                                 <option>Azul</option>
+                                 <option>Amarillo</option>
+                                 <option>Verde</option>
+                                 <option>Rojo</option>
+                                </select>
+                                <br>
+                        </div>
+                        <div class= "form-group col-12 col-md-6 col-lg-4  col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Talla</label>
+                            <select class="form-control " name ="SIZE" [(ngModel)] = "product.SIZE" class="form-control">
+                                 <option>Seleccione</option>
+                                 <option>7</option>
+                                 <option>7.5</option>
+                                 <option>8</option>
+                                 <option>8.5</option>
+                                 <option>9</option>
+                                 <option>9.5</option>
+                                 <option>10</option>
+                                 <option>10.5</option>
+                                 <option>11</option>
+                                </select>
+                                <br>
+                        </div>
+                        <div class= "form-group col-12 col-md-6 col-lg-4  col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">Stock</label>
+                            <input type="text" class="form-control" name="STOCK" [(ngModel)] = "product.STOCK" placeholder="stock" autofocus>                       
+                            <br>    
+                        </div>
+                        <div class= "form-group col-12 col-md-6 col-lg-4  col-sm-12">
+                            <label class="col-md-3 form-control-label" for="email-input">ESTADO</label>
+                            <select class="form-control" [value]='46' required="" name ="STATE" [(ngModel)] = "product.STATE">
+                               
+                                 <option value="A" [selected] ="true">Activado</option>
+                                 <option value="D">Desactivado</option>
+                                </select>
+                                <br>
+                        </div>     
+                    </div>  
+                    <div class="modal-footer">
+                        <div>
+                            <button class="btn btn-success btn-block" (click)= "edit ? updateProduct(): saveNewProduct()">Guardar</button>
+                        </div>
+                        
+                        
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </main>

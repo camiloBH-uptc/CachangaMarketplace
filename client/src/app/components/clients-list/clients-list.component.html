@@ -1,0 +1,88 @@
+<main class="main">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+        <li class="breadcrumb-item active">Clientes</li>
+    </ol>
+<div class="container-fluid">
+    <!-- Ejemplo de tabla Listado -->
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-align-justify"></i> Clientes
+        </div>
+  
+        <div class="card-body">
+            <!--div class="form-group row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <select class="form-control col-md-3" id="opcion" name="opcion">
+                          <option value="nombre">Nombre</option>
+                          <option value="descripcion">email</option>
+                          <option value="descripcion">cedula</option>
+                          <option value="descripcion">dirección</option>
+                          <option value="descripcion">telefono</option>
+                        </select>
+                        <input type="text" id="texto" name="texto" class="form-control" placeholder="Texto a buscar">
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
+                    </div>
+                </div>
+            </div-->
+            <table class="table table-bordered table-striped table-sm">
+                <thead>
+                    <tr>   
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cedula</th>
+                        <th>Email</th>
+                        <th>Direccion</th>      
+                        <th>Telefono</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let client of clients">
+  
+                        <td>{{client.UNAME}}</td>
+                        <td>{{client.LASTNAME}}
+                        </td>
+                        <td>{{client.ID}}</td>
+                        <th>{{client.EMAIL}}</th>
+                        <th>{{client.DIRECTION}}</th>
+                        <th>{{client.TELEPHONE}}</th>
+                        <td>
+                            <button type="button" class="btn btn-danger" (click)="deleteClient(client.ID)">Eliminar
+                            <i class="icon-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <!--nav>
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#">Ant</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Sig</a>
+                    </li>
+                </ul>
+            </nav-->
+        </div>
+    </div>
+    <!-- Fin ejemplo de tabla Listado -->
+  </div>
+</main>
+  
